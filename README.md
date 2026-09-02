@@ -10,7 +10,14 @@
 </p>
 
 <p align="center">
+  <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=FezVrasta&repository=ha-integration-template&category=integration">
+    <img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open this repository in HACS">
+  </a>
+</p>
+
+<p align="center">
   <img src="https://github.com/FezVrasta/ha-integration-template/actions/workflows/ci.yml/badge.svg" alt="CI">
+  <img src="https://img.shields.io/badge/HACS-custom-41BDF5.svg" alt="HACS custom repository">
   <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT">
 </p>
 
