@@ -239,7 +239,7 @@ def main() -> None:
         "  2. Fill in manifest.json: integration_type, iot_class, requirements\n"
         "  3. Replace api.py with the real client\n"
         "  4. scripts/setup && scripts/test\n"
-        "  5. Draw the brand icon — see .claude/skills/brand-assets"
+        "  5. Replace the placeholder brand icon — see .claude/skills/brand-assets"
     )
 
 

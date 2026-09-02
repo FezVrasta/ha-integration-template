@@ -63,7 +63,9 @@ picks up automatically in any repository made from this template:
 | `hacs-publish` | What the HACS action actually checks, the default list, upstreaming to core |
 
 **Repository furniture.** Issue template that asks for diagnostics, dependabot for the
-actions, `CONTRIBUTING.md`, `CLAUDE.md`, MIT licence.
+actions, `CONTRIBUTING.md`, `CLAUDE.md`, MIT licence, and a placeholder brand icon —
+the HACS job fails outright on a missing `icon.png`, and a new repository should not
+start red. Replace it before the first release.
 
 ## Layout
 

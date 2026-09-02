@@ -81,7 +81,7 @@ the code does what the tests say; it does not mean the device agrees.
 
 ## 5. Repository settings
 
-The HACS action fails without them, so do this before wondering why CI is red:
+The HACS action fails without these, so do this before wondering why CI is red:
 
 ```bash
 gh repo edit --description "One line, the same one as the README subtitle" \
@@ -92,5 +92,6 @@ gh repo edit --description "One line, the same one as the README subtitle" \
 ## What to do next
 
 - README — `.claude/skills/readme-style`
-- Icon — `.claude/skills/brand-assets`
+- Icon — `.claude/skills/brand-assets`. The scaffold ships a generic placeholder so the
+  HACS job passes on day one; it is not something to release.
 - First release — `.claude/skills/cut-release`

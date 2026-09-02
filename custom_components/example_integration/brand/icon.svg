@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Placeholder integration icon</title>
+
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3B4250"/>
+      <stop offset="1" stop-color="#23272F"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="32" y="32" width="960" height="960" rx="224" fill="url(#tile)"/>
+
+  <g fill="none" stroke="#41BDF5" stroke-width="44" stroke-linecap="round">
+    <rect x="336" y="336" width="352" height="352" rx="72"/>
+    <g stroke-linecap="butt">
+      <path d="M424 336V248M512 336V248M600 336V248"/>
+      <path d="M424 688v88M512 688v88M600 688v88"/>
+      <path d="M336 424H248M336 512H248M336 600H248"/>
+      <path d="M688 424h88M688 512h88M688 600h88"/>
+    </g>
+  </g>
+
+  <circle cx="512" cy="512" r="60" fill="#41BDF5"/>
+</svg>

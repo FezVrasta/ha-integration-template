@@ -1,5 +1,9 @@
 # Brand assets
 
+> **The icon here is a placeholder — replace it before the first release.** It ships
+> because the HACS CI job fails outright on a missing `icon.png`, and a new repository
+> should not start red. It is a generic chip glyph; it says nothing about your device.
+
 Home Assistant serves these. Since **2026.3** a custom integration ships its own brand
 images in a `brand/` folder inside the integration, and Home Assistant exposes them at
 `/api/brands/integration/<domain>/`, taking priority over the brands CDN. The central

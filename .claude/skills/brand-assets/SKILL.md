@@ -22,6 +22,13 @@ shows the generic puzzle-piece icon and nothing breaks.
 
 See the [Brands Proxy API announcement](https://developers.home-assistant.io/blog/2026/02/24/brands-proxy-api/).
 
+## The placeholder
+
+A fresh repository from the template ships a generic chip icon. It is there because the
+HACS CI job fails outright on a missing `icon.png` — not because it is good enough.
+Replace it before the first release; it says nothing about the device and every
+integration that ships it looks like every other one.
+
 ## Filenames and sizes
 
 | File | Size | Used for |
