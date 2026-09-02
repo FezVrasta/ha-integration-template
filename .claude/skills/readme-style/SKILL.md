@@ -37,7 +37,7 @@ instead of it.
   <img src="https://github.com/FezVrasta/<repo>/actions/workflows/ci.yml/badge.svg" alt="CI">
   <img src="https://img.shields.io/badge/HACS-custom-41BDF5.svg" alt="HACS custom repository">
   <img src="https://img.shields.io/badge/Home%20Assistant-2026.8%2B-41BDF5" alt="Home Assistant">
-  <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
 </p>
 
 ---
@@ -76,8 +76,9 @@ read a barcode on the capsule…") earns more trust than an omitted one and prev
 issue being filed as a bug.
 
 Avoid: "seamlessly", "powerful", "simply", "leverage", "robust", exclamation marks, and
-any sentence that would survive being deleted. British spelling ("licence", "behaviour"),
-en dashes for ranges.
+any sentence that would survive being deleted. British spelling ("behaviour",
+"authorise", "colour"), en dashes for ranges — but **"license"**, spelled the American
+way, because it matches the `LICENSE` file and every SPDX identifier.
 
 ## What not to put in the README
 

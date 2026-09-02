@@ -52,7 +52,7 @@ README_SKELETON = """\
 <p align="center">
   <img src="https://github.com/{repo}/actions/workflows/ci.yml/badge.svg" alt="CI">
   <img src="https://img.shields.io/badge/HACS-custom-41BDF5.svg" alt="HACS custom repository">
-  <img src="https://img.shields.io/badge/licence-MIT-blue.svg" alt="MIT licence">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license">
 </p>
 
 ---
@@ -71,7 +71,7 @@ have, what it does not do today, what this changes.
 Click the badge above (or add this repo to HACS as a custom **Integration**), install,
 restart, then add **{name}** from **Settings → Devices & Services**.
 
-## Licence
+## License
 
 MIT.
 """

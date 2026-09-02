@@ -18,7 +18,7 @@
 <p align="center">
   <img src="https://github.com/FezVrasta/ha-integration-template/actions/workflows/ci.yml/badge.svg" alt="CI">
   <img src="https://img.shields.io/badge/HACS-custom-41BDF5.svg" alt="HACS custom repository">
-  <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
 </p>
 
 ---
@@ -74,7 +74,7 @@ picks up automatically in any repository made from this template:
 | `hacs-publish` | What the HACS action actually checks, the default list, upstreaming to core |
 
 **Repository furniture.** Issue template that asks for diagnostics, dependabot for the
-actions, `CONTRIBUTING.md`, `CLAUDE.md`, MIT licence, and a placeholder brand icon —
+actions, `CONTRIBUTING.md`, `CLAUDE.md`, MIT license, and a placeholder brand icon —
 the HACS job fails outright on a missing `icon.png`, and a new repository should not
 start red. Replace it before the first release.
 
@@ -104,6 +104,6 @@ and it dictates the Python version. Currently `0.13.357` → Home Assistant 2026
 3.14. When you bump it, bump `PYTHON_VERSION` in `.github/workflows/ci.yml` and the
 `homeassistant` floor in `hacs.json` with it.
 
-## Licence
+## License
 
 MIT.
