@@ -94,6 +94,7 @@ custom_components/example_integration/
   brand/               icons Home Assistant serves since 2026.3
 tests/                 conftest fixtures + the four suites above
 scripts/               bootstrap, setup, test
+tools/make_icon.py     generates the placeholder squircle icon, then renders it
 tools/render_brand.py  SVG → the PNG sizes Home Assistant wants
 ```
 

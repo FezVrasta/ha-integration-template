@@ -27,17 +27,36 @@ Nothing breaks.
 | `dark_icon.png` | 256×256 | Optional: a variant for dark themes |
 
 `icon.png` must be square and transparent-safe on both themes. The usual way to get that
-without shipping a `dark_` variant is a self-contained tile — an app-icon-style rounded
-square with its own background — rather than a bare glyph.
+without shipping a `dark_` variant is a self-contained tile — an app-icon-style squircle
+with its own background — rather than a bare glyph.
 
-Keep `icon.svg` as the source and render the PNGs from it, so the raster files are never
-hand-edited:
+## Regenerating
+
+`icon.svg` is generated, not hand-edited. Change `tools/make_icon.py` and re-run it — it
+writes the source and renders every PNG:
+
+```sh
+python tools/make_icon.py
+```
+
+To render an SVG you drew elsewhere, skip the generator and use:
 
 ```sh
 python tools/render_brand.py custom_components/<domain>/brand/icon.svg
 ```
 
-That needs `rsvg-convert` (`brew install librsvg`).
+Both need `rsvg-convert` (`brew install librsvg`).
+
+## The tile shape
+
+A **squircle** — a superellipse with exponent 5, so the curvature eases into the straight
+edges rather than meeting them at a tangent the way a rounded rectangle's circular arcs
+do. That is the difference between an iOS app icon and a CSS `border-radius`, and it is
+visible at 256px once you know to look. `squircle()` in `tools/make_icon.py` emits the
+path; it takes the exponent as an argument if you want a boxier or rounder tile.
+
+It is drawn full-bleed, inscribed in the whole 1024 artboard rather than inset, because
+that is how an app icon fills its mask.
 
 ## Two things that will bite you
 

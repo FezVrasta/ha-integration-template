@@ -43,22 +43,35 @@ integration that ships it looks like every other one.
 raster files are never hand-edited:
 
 ```bash
-python tools/render_brand.py custom_components/<domain>/brand/icon.svg
+python tools/make_icon.py                                        # generate + render
+python tools/render_brand.py custom_components/<domain>/brand/icon.svg   # render only
 ```
 
-That needs `rsvg-convert` (`brew install librsvg`). Use it rather than Chromium or
+Both need `rsvg-convert` (`brew install librsvg`). Use it rather than Chromium or
 Inkscape — librsvg is what Home Assistant's own tooling uses, and the three disagree
 about filters.
 
 ## Design
 
-A self-contained tile — an app-icon-style rounded square with its own background — reads
+A self-contained tile — an app-icon-style squircle with its own background — reads
 correctly on light and dark themes alike, which is how to avoid shipping a `dark_`
 variant at all. A bare glyph needs one.
 
-If you generate the SVG from a script, keep the script (`tools/make_icon.py`) and treat
-the SVG as build output. Editing generated SVG by hand and then regenerating it is how
-icons quietly revert.
+**Use a squircle, not a rounded rectangle.** A superellipse with exponent around 5 eases
+its curvature into the straight edges; a rounded rectangle's circular arcs meet them at a
+tangent, and the corner reads as a visible join. `squircle()` in `tools/make_icon.py`
+emits the path:
+
+```python
+x = math.copysign(abs(math.cos(t)) ** (2 / n), math.cos(t))
+y = math.copysign(abs(math.sin(t)) ** (2 / n), math.sin(t))
+```
+
+Draw it full-bleed, inscribed in the whole artboard rather than inset, the way an app
+icon fills its mask.
+
+The SVG is build output: change `tools/make_icon.py` and re-run it. Editing generated SVG
+by hand and then regenerating it is how icons quietly revert.
 
 ## Optical centring
 
