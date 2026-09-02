@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="custom_components/example_integration/brand/icon.png" width="128" alt="">
+</p>
+
 <h1 align="center">Home Assistant integration template</h1>
 
 <p align="center">
