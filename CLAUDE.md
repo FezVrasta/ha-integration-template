@@ -14,8 +14,11 @@ Other skills: `integration-tests`, `readme-style`, `brand-assets`, `cut-release`
 
 ## Invariants
 
-- **`manifest.json`'s `version` is set by CI from the release tag.** Never edit it by
-  hand.
+- **`manifest.json`'s `version` belongs to the release commit.** Set it with
+  `scripts/bump-version X.Y.Z`, which writes and commits it, *before* creating the
+  release. HACS serves the tagged tree, so a version applied after the tag exists is
+  a version nobody installs. CI checks the two agree and will fail the release if they
+  do not.
 - **`strings.json` and `translations/en.json` must be identical.** `strings.json` is the
   source; the copy in `translations/` is what Home Assistant serves. CI diffs them.
 - **Unique IDs are permanent.** Changing one orphans every user's history for that
