@@ -46,7 +46,8 @@ every 30 seconds is the kind of thing reviewers and users both notice.
 
 Also: `requirements` must pin exactly (`foo==1.2.3`), never a range — Home Assistant
 installs what the manifest says, and a floating pin means two users run different code.
-Leave `version` at whatever it is; the release workflow sets it from the tag.
+Leave `version` at whatever it is. `scripts/bump-version` sets it as part of cutting
+a release, and CI fails the release if the tag and the manifest disagree.
 
 ## 3. Replace the scaffold, in this order
 
